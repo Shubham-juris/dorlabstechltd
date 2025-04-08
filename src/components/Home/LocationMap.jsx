@@ -1,4 +1,4 @@
-export default function Map() {
+export default function LocationMap() {
     return (
       <div className="w-full h-[50vh] mt-10 mb-0">
         <iframe

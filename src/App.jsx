@@ -7,9 +7,9 @@ import Expertise from "./components/Home/Expertise";
 import Contact from "./components/Home/Contact";
 import Footer from "./components/Home/Footer";
 import AffordableServices from "./components/Home/AffordableServices";
-import Map from "./components/Home/map";
 import Marquee from "./components/Home/Marquee";
 import SubscribeForm from "./components/Home/SubscribeForm";
+import LocationMap from "./components/Home/LocationMap";
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
         <Expertise />
         <AffordableServices />
         <Contact />
-        <Map />
+        <LocationMap/>
         <Marquee />
         <SubscribeForm />
         <Footer />
