@@ -112,7 +112,7 @@ function Contact() {
               <h4 className="text-xl font-bold mb-4">Dorlabs Tech</h4>
               <p className="mb-2">5-2002 20 Ave Bowden, AB T0M 0K0</p>
               <p className="mb-2">Dorlabstech@gmail.com</p>
-              <p>+1 403-5502-982</p>
+              <p>+1 403-550-2982</p>
             </div>
 
             <div>
