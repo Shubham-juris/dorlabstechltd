@@ -1,5 +1,6 @@
 import React from "react";
-import "./App.css";
+import { Routes, Route } from "react-router-dom";
+
 import Header from "./components/Home/Header";
 import Hero from "./components/Home/Hero";
 import About from "./components/Home/About";
@@ -12,24 +13,35 @@ import SubscribeForm from "./components/Home/SubscribeForm";
 import Navbar from "./components/Home/Navbar";
 import LocationMap from "./components/Home/LocationMap";
 
-function App() {
+import ServicePage from "./Pages/Servic"; // import from src folder
+
+function Home() {
   return (
     <>
-      <div className="font-sans">
-        <Navbar />
-        {/* <Header /> */}
-        <Hero />
-        <About />
-        <Expertise />
-        <AffordableServices />
-        <Contact />
-        <LocationMap/>
-        <Marquee />
-        <SubscribeForm />
-        <Footer />
-        
-      </div>
+      {/* The homepage content */}
+      <Hero />
+      <About />
+      <Expertise />
+      <AffordableServices />
+      <Contact />
+      <LocationMap />
+      <Marquee />
+      <SubscribeForm />
     </>
+  );
+}
+
+function App() {
+  return (
+    <div className="font-sans">
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/services" element={<ServicePage />} />
+        {/* You can add more routes here */}
+      </Routes>
+      <Footer />
+    </div>
   );
 }
 
