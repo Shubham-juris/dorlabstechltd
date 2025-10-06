@@ -9,13 +9,15 @@ import Footer from "./components/Home/Footer";
 import AffordableServices from "./components/Home/AffordableServices";
 import Marquee from "./components/Home/Marquee";
 import SubscribeForm from "./components/Home/SubscribeForm";
+import Navbar from "./components/Home/Navbar";
 import LocationMap from "./components/Home/LocationMap";
 
 function App() {
   return (
     <>
       <div className="font-sans">
-        <Header />
+        <Navbar />
+        {/* <Header /> */}
         <Hero />
         <About />
         <Expertise />
