@@ -55,13 +55,13 @@ export default function Footer() {
             <h3 className="font-semibold text-lg mb-4">Contact Us</h3>
             <ul className="space-y-2 text-gray-300 text-sm">
               <li>
-                <strong>Address:</strong> 123 Tech Park, Silicon Valley, CA
+                <strong>Address:</strong> 5-2002 20 Ave , Bowden, AB, Canada, Alberta
               </li>
               <li>
-                <strong>Phone:</strong> <a href="tel:+1234567890" className="hover:text-blue-400 transition-colors">+1 (234) 567-890</a>
+                <strong>Phone:</strong> <a href="tel:+1234567890" className="hover:text-blue-400 transition-colors">+1 403-550-2982</a>
               </li>
               <li>
-                <strong>Email:</strong> <a href="mailto:info@dorlabstech.com" className="hover:text-blue-400 transition-colors">info@dorlabstech.com</a>
+                <strong>Email:</strong> <a href="mailto:info@dorlabstech.com" className="hover:text-blue-400 transition-colors">dorlabstech@gmail.com</a>
               </li>
               <li>
                 <strong>Working Hours:</strong> Mon - Fri, 9am - 6pm
@@ -91,7 +91,7 @@ export default function Footer() {
             {/* Social Icons */}
             <div className="flex space-x-6 mt-6 justify-start sm:justify-start">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/profile.php?id=100094213581942"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
