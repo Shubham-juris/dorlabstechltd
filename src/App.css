@@ -1,0 +1,4 @@
+body {
+  @apply bg-gradient-to-b from-white to-blue-100;
+  min-height: 100vh;
+}
