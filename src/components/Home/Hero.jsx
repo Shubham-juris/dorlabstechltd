@@ -108,7 +108,7 @@ function Hero() {
             {/* CTA Buttons */}
             <div className="flex flex-wrap items-center gap-4 mb-10">
               <a
-                href="#consultation"
+                href="https://www.dorlabtech.ca/contact"
                 className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-900 rounded-xl font-bold uppercase tracking-wide shadow-xl hover:scale-105 hover:bg-blue-100 transition-all duration-300"
               >
                 Get a Free Consultation
