@@ -58,10 +58,10 @@ export default function Footer() {
                 <strong>Address:</strong> 5-2002 20 Ave , Bowden, AB, Canada, Alberta
               </li>
               <li>
-                <strong>Phone:</strong> <a href="tel:+1234567890" className="hover:text-blue-400 transition-colors">+1 403-550-2982</a>
+                <strong>Phone:</strong> <a href="tel:+1 403-550-2982" className="hover:text-blue-400 transition-colors">+1 403-550-2982</a>
               </li>
               <li>
-                <strong>Email:</strong> <a href="mailto:info@dorlabstech.com" className="hover:text-blue-400 transition-colors">dorlabstech@gmail.com</a>
+                <strong>Email:</strong> <a href="mailto:info@dorlabtech.com" className="hover:text-blue-400 transition-colors">info@dorlabtech.com</a>
               </li>
               <li>
                 <strong>Working Hours:</strong> Mon - Fri, 9am - 6pm
