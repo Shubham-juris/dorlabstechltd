@@ -12,6 +12,7 @@ import Marquee from "./components/Home/Marquee";
 import SubscribeForm from "./components/Home/SubscribeForm";
 import Navbar from "./components/Home/Navbar";
 import LocationMap from "./components/Home/LocationMap";
+import AboutUsPage from "./Pages/AboutUsPage";
 
 import ServicePage from "./Pages/Servic"; // import from src folder
 import AboutPage from "./Pages/AboutPage";
@@ -39,7 +40,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<ServicePage />} />
-        <Route path="/about" element={<AboutPage />} />
+        <Route path="/about" element={<AboutUsPage />} />
         <Route path="/contact" element={<ContactPage/>} />
         {/* You can add more routes here */}
       </Routes>
