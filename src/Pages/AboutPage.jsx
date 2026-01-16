@@ -18,40 +18,45 @@ const fadeUp = {
 };
 
 const services = [
+  // 🔵 NETWORKING (PRIORITY)
   {
-    icon: <CodeBracketIcon className="h-10 w-10 text-blue-600" />,
-    title: "Custom Software Development",
-    desc: "Tailored software solutions built for scalability, speed, and security.",
+    icon: <ServerStackIcon className="h-10 w-10 text-blue-600" />,
+    title: "Network Infrastructure & Design",
+    desc: "Scalable and secure network architectures built for modern businesses.",
   },
   {
     icon: <CloudIcon className="h-10 w-10 text-blue-600" />,
-    title: "Cloud Integration",
-    desc: "Seamless integration with cloud platforms like AWS, Azure, and GCP.",
-  },
-  {
-    icon: <ShieldCheckIcon className="h-10 w-10 text-blue-600" />,
-    title: "Cybersecurity",
-    desc: "Secure your digital assets with advanced threat protection.",
-  },
-  {
-    icon: <ChartBarIcon className="h-10 w-10 text-blue-600" />,
-    title: "Data Analytics",
-    desc: "Unlock insights through analytics and reporting dashboards.",
-  },
-  {
-    icon: <AdjustmentsHorizontalIcon className="h-10 w-10 text-blue-600" />,
-    title: "IT Consulting",
-    desc: "Get expert strategy and advisory for digital transformation.",
-  },
-  {
-    icon: <ServerStackIcon className="h-10 w-10 text-blue-600" />,
-    title: "Managed IT Services",
-    desc: "Complete support and infrastructure management.",
+    title: "LAN / WAN & Network Integration",
+    desc: "Reliable local and wide-area network solutions with seamless connectivity.",
   },
   {
     icon: <LockClosedIcon className="h-10 w-10 text-blue-600" />,
-    title: "Internet Security",
-    desc: "Firewall, endpoint, and network security.",
+    title: "Network & Internet Security",
+    desc: "Firewall, endpoint, and network protection to secure your infrastructure.",
+  },
+
+  // 🔵 IT + SECURITY
+  {
+    icon: <ShieldCheckIcon className="h-10 w-10 text-blue-600" />,
+    title: "Cybersecurity Services",
+    desc: "Advanced threat detection and protection for systems and data.",
+  },
+  {
+    icon: <AdjustmentsHorizontalIcon className="h-10 w-10 text-blue-600" />,
+    title: "Managed IT Services",
+    desc: "Proactive IT management and support to minimize downtime.",
+  },
+
+  // 🔵 SOFTWARE / DATA (LAST)
+  {
+    icon: <CodeBracketIcon className="h-10 w-10 text-blue-600" />,
+    title: "Custom Software Development",
+    desc: "Tailored software solutions built for performance, scale, and security.",
+  },
+  {
+    icon: <ChartBarIcon className="h-10 w-10 text-blue-600" />,
+    title: "Data Analytics & Reporting",
+    desc: "Actionable insights through analytics and custom dashboards.",
   },
 ];
 
@@ -139,10 +144,10 @@ const AboutPage = () => {
               <br />
               <strong className="text-blue-800">Email:</strong>{" "}
               <a
-                href="mailto:dorlabstech@gmail.com"
+                href="mailto:info@dorlabtech.com"
                 className="text-blue-600 underline hover:text-blue-800"
               >
-                dorlabstech@gmail.com
+                info@dorlabtech.com
               </a>
             </p>
 
