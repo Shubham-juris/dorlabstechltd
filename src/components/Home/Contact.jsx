@@ -123,7 +123,7 @@ function Contact() {
               <p className="mb-2">
                 5-2002 20 Ave , Bowden, AB, Canada, Alberta
               </p>
-              <p className="mb-2">dorlabstech@gmail.com</p>
+              <p className="mb-2">info@dorlabtech.com</p>
               <p>+1 403-550-2982</p>
             </div>
 
