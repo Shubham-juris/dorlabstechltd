@@ -11,7 +11,7 @@ function AffordableServices() {
         </p>
         <div className="flex justify-center">
           <a 
-            href="#services" 
+            href="https://www.dorlabtech.ca/services" 
             className="bg-blue-900 text-white uppercase font-medium px-8 py-3 hover:bg-blue-800 transition-colors"
           >
             FIND OUT MORE
