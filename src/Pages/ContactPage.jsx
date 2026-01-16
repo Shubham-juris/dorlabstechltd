@@ -102,10 +102,10 @@ const ContactPage = () => {
               <br />
               <strong className="text-blue-800">Email:</strong>{" "}
               <a
-                href="mailto:dorlabstech@gmail.com"
+                href="mailto:info@dorlabtech.com"
                 className="text-blue-600 underline hover:text-blue-800"
               >
-                dorlabstech@gmail.com
+                info@dorlabtech.com
               </a>
               <br />
               <strong className="text-blue-800">Working Hours:</strong> Mon - Fri: 9AM – 6PM
