@@ -22,33 +22,34 @@ export default function ManagedITServices() {
         </p>
 
         <div className="grid md:grid-cols-2 gap-12 text-left">
-          <div className="bg-white p-10 rounded-2xl shadow-lg">
-            <h2 className="text-2xl font-bold text-blue-900 mb-4">
+          {/* CARD 1 */}
+          <div className="bg-blue-800 p-10 rounded-2xl shadow-lg hover:shadow-2xl transition text-white">
+            <h2 className="text-2xl font-bold mb-4">
               Monitoring & Maintenance
             </h2>
-            <ul className="list-disc ml-6 text-gray-700 space-y-2">
+            <ul className="list-disc ml-6 space-y-2 text-blue-100">
               <li>24/7 system monitoring</li>
               <li>Patch management & updates</li>
               <li>Performance optimization</li>
             </ul>
           </div>
 
-          <div className="bg-white p-10 rounded-2xl shadow-lg">
-            <h2 className="text-2xl font-bold text-blue-900 mb-4">
-              IT Support Services
-            </h2>
-            <ul className="list-disc ml-6 text-gray-700 space-y-2">
+          {/* CARD 2 */}
+          <div className="bg-blue-800 p-10 rounded-2xl shadow-lg hover:shadow-2xl transition text-white">
+            <h2 className="text-2xl font-bold mb-4">IT Support Services</h2>
+            <ul className="list-disc ml-6 space-y-2 text-blue-100">
               <li>Remote & on-site IT support</li>
               <li>Help desk services</li>
               <li>Fast issue resolution</li>
             </ul>
           </div>
 
-          <div className="bg-white p-10 rounded-2xl shadow-lg">
-            <h2 className="text-2xl font-bold text-blue-900 mb-4">
+          {/* CARD 3 */}
+          <div className="bg-blue-800 p-10 rounded-2xl shadow-lg hover:shadow-2xl transition text-white">
+            <h2 className="text-2xl font-bold mb-4">
               Infrastructure Management
             </h2>
-            <ul className="list-disc ml-6 text-gray-700 space-y-2">
+            <ul className="list-disc ml-6 space-y-2 text-blue-100">
               <li>Server & workstation management</li>
               <li>Device & vendor coordination</li>
               <li>System lifecycle management</li>

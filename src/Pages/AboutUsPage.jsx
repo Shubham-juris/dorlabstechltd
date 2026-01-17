@@ -114,9 +114,9 @@ export default function AboutUsPage() {
             ].map((item, index) => (
               <div
                 key={index}
-                className="bg-gray-50 rounded-xl p-6 border border-blue-100 hover:shadow-lg transition"
+                className="bg-blue-900 rounded-xl p-6 border border-black hover:shadow-lg transition"
               >
-                <p className="text-gray-700 text-lg">{item}</p>
+                <p className="text-white text-lg">{item}</p>
               </div>
             ))}
           </div>
@@ -149,7 +149,7 @@ export default function AboutUsPage() {
             ].map((item, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl p-6 border border-blue-100 shadow-sm"
+                className="bg-white rounded-xl p-6 border border-black shadow-sm"
               >
                 <h3 className="text-xl font-bold text-blue-900 mb-3">
                   {item.title}

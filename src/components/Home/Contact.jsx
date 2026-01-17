@@ -31,7 +31,7 @@ function Contact() {
             </p>
 
             <div className="space-y-2">
-              <p>📍 Bowden, Alberta, Canada</p>
+              <p>📍 5-2002 20 Ave, Bowden, Alberta, Canada</p>
               <p>📧 info@dorlabtech.com</p>
               <p>📞 +1 403-550-2982</p>
             </div>
@@ -48,7 +48,7 @@ function Contact() {
               </p>
 
               <Link
-                to="/contact"
+                to="/get-quote"
                 className="inline-block bg-white text-blue-900 px-10 py-4 rounded-xl font-bold uppercase tracking-wide hover:bg-blue-100 transition-all"
               >
                 Get a Quote
