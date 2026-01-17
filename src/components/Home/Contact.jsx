@@ -1,151 +1,61 @@
-import React, { useState } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 
 function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-    subscribe: false,
-  });
-
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: type === "checkbox" ? checked : value,
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-  };
-
   return (
-    <section className="bg-blue-900 py-16 px-4 md:px-10 lg:px-20 text-white">
+    <section className="bg-blue-900 py-20 px-4 md:px-10 lg:px-20 text-white">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-bold mb-12 text-center md:text-left">
-          CONTACT US
-        </h2>
 
-        <div className="flex flex-col md:flex-row gap-12">
-          {/* Form Section */}
-          <div className="w-full md:w-1/2">
-            <h3 className="text-xl md:text-2xl font-bold mb-6">
-              Reach out to us!
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
+            Ready to Improve Your IT & Network Infrastructure?
+          </h2>
+          <p className="text-blue-200 max-w-3xl mx-auto text-lg">
+            Contact Dorlabs Tech today for reliable IT and networking services in
+            Alberta. Our experts are ready to help your business stay secure and
+            connected.
+          </p>
+        </div>
+
+        <div className="flex flex-col md:flex-row gap-12 items-center">
+
+          {/* Info */}
+          <div className="w-full md:w-1/2 text-center md:text-left">
+            <h3 className="text-2xl font-bold mb-6">
+              Get in Touch with Our Team
             </h3>
 
-            <form onSubmit={handleSubmit}>
-              <div className="mb-6">
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  className="w-full bg-transparent border-b border-white pb-2 text-white placeholder-gray-300 focus:outline-none"
-                  required
-                />
-              </div>
-
-              <div className="mb-6">
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email*"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="w-full bg-transparent border-b border-white pb-2 text-white placeholder-gray-300 focus:outline-none"
-                  required
-                />
-              </div>
-
-              <div className="mb-6">
-                <textarea
-                  name="message"
-                  placeholder="Message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  className="w-full bg-transparent border border-white p-3 text-white placeholder-gray-300 focus:outline-none h-32"
-                  required
-                />
-              </div>
-
-              <div className="mb-6 flex items-start">
-                <input
-                  type="checkbox"
-                  id="subscribe"
-                  name="subscribe"
-                  checked={formData.subscribe}
-                  onChange={handleChange}
-                  className="mr-2 mt-1"
-                />
-                <label htmlFor="subscribe" className="text-sm">
-                  Sign up for our email list for updates, promotions, and more.
-                </label>
-              </div>
-
-              <button
-                type="submit"
-                className="w-full border border-white py-3 px-4 text-center uppercase tracking-wider hover:bg-white hover:text-black hover:bg-opacity-10 transition-all"
-              >
-                — SEND —
-              </button>
-
-              <p className="text-xs mt-4">
-                This site is protected by reCAPTCHA and the Google
-                <a href="#" className="text-white underline mx-1">
-                  Privacy Policy
-                </a>
-                and
-                <a href="#" className="text-white underline mx-1">
-                  Terms of Service
-                </a>
-                apply.
-              </p>
-            </form>
-          </div>
-
-          {/* Info Section */}
-          <div className="w-full md:w-1/2">
-            <h3 className="text-xl md:text-2xl font-bold mb-6">
-              Call or Email us
-            </h3>
-
-            <p className="mb-6 text-sm md:text-base">
-              We value our customers and invite you to visit us during our
-              regular business hours. Alternatively, you can reach out via email
-              anytime, and we guarantee a prompt response.
+            <p className="mb-6 text-blue-200">
+              Whether you need networking services, managed IT support, or
+              cybersecurity solutions, our Alberta-based team is here to help.
             </p>
 
-            <div className="mb-8 text-sm md:text-base">
-              <h4 className="text-xl font-bold mb-4">Dorlabs Tech</h4>
-              <p className="mb-2">
-                5-2002 20 Ave , Bowden, AB, Canada, Alberta
-              </p>
-              <p className="mb-2">info@dorlabtech.com</p>
-              <p>+1 403-550-2982</p>
-            </div>
-
-            <div>
-              <h4 className="text-xl font-bold mb-4">Hours</h4>
-              <div className="flex items-center text-sm md:text-base">
-                <span>Open today</span>
-                <span className="ml-2">09:00 a.m. – 05:00 p.m.</span>
-                <svg
-                  className="w-4 h-4 ml-1"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                    clipRule="evenodd"
-                  ></path>
-                </svg>
-              </div>
+            <div className="space-y-2">
+              <p>📍 Bowden, Alberta, Canada</p>
+              <p>📧 info@dorlabtech.com</p>
+              <p>📞 +1 403-550-2982</p>
             </div>
           </div>
+
+          {/* CTA */}
+          <div className="w-full md:w-1/2 text-center">
+            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-10">
+              <h4 className="text-xl font-bold mb-4">
+                Need IT Support or Networking Services?
+              </h4>
+              <p className="text-blue-200 mb-8">
+                Request a quote or speak with our IT specialists today.
+              </p>
+
+              <Link
+                to="/contact"
+                className="inline-block bg-white text-blue-900 px-10 py-4 rounded-xl font-bold uppercase tracking-wide hover:bg-blue-100 transition-all"
+              >
+                Get a Quote
+              </Link>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>

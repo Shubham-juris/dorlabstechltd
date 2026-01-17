@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function LocationMap() {
     return (
       <div className="w-full h-[50vh]  mb-0">

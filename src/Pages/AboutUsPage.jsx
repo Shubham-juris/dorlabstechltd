@@ -1,5 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Testimonials from "./Testimonials";
+import Marquee from "../components/Marquee";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -8,191 +10,180 @@ const fadeUp = {
 
 export default function AboutUsPage() {
   return (
-    <main className="min-h-screen bg-white text-gray-800 overflow-hidden">
+    <>
+      <main className="min-h-screen bg-white text-gray-800 overflow-hidden">
 
-      {/* HERO SECTION */}
-      <section className="relative bg-gradient-to-br from-blue-950 via-blue-900 to-blue-700 text-white py-28 px-6 md:px-12">
-        {/* Glow effects */}
-        <div className="absolute -top-32 -left-32 w-[420px] h-[420px] bg-blue-500/20 blur-3xl rounded-full"></div>
-        <div className="absolute bottom-0 right-0 w-[320px] h-[320px] bg-white/10 blur-3xl rounded-full"></div>
+        {/* HERO SECTION */}
+        <section className="relative bg-gradient-to-br from-blue-950 via-blue-900 to-blue-700 text-white py-28 px-6 md:px-12">
+          <motion.div
+            initial="hidden"
+            animate="show"
+            variants={fadeUp}
+            className="relative max-w-5xl mx-auto text-center"
+          >
+            <span className="inline-block mb-5 px-5 py-1 text-xs tracking-widest uppercase rounded-full border border-white/10 bg-white/10">
+              About Dorlabs Tech
+            </span>
 
-        <motion.div
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight">
+              Trusted IT & Networking Company in Alberta
+            </h1>
+
+            <p className="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto">
+              Dorlabs Tech is a trusted IT and networking services company in Alberta,
+              helping small and medium-sized businesses build secure, reliable, and
+              scalable technology infrastructure. From business network setup to
+              managed IT support, we ensure your systems work seamlessly so you can
+              focus on growth.
+            </p>
+          </motion.div>
+        </section>
+
+        {/* MARQUEE */}
+        <Marquee />
+
+        {/* OUR STORY */}
+        <motion.section
           initial="hidden"
-          animate="show"
+          whileInView="show"
+          viewport={{ once: true }}
           variants={fadeUp}
-          className="relative max-w-5xl mx-auto text-center"
+          className="py-24 px-6 md:px-12 bg-gray-50"
         >
-          <span className="inline-block mb-5 px-5 py-1 text-xs tracking-widest uppercase rounded-full border border-white/20 bg-white/10">
-            About Dorlabs Tech
-          </span>
-
-          <h1 className="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
-            Built on Trust. <br />
-            <span className="text-blue-300">Driven by Technology.</span>
-          </h1>
-
-          <p className="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto">
-            Helping Alberta businesses stay connected, protected, and productive
-            through reliable IT and networking solutions.
-          </p>
-        </motion.div>
-      </section>
-
-      {/* OUR STORY */}
-      <motion.section
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
-        variants={fadeUp}
-        className="py-24 px-6 md:px-12 bg-gray-50"
-      >
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <h2 className="text-4xl font-extrabold text-blue-900 mb-6">
-              Our Story
-            </h2>
-            <p className="text-gray-700 text-lg leading-relaxed mb-5">
-              Founded to help local businesses take advantage of modern
-              technology, <strong>Dorlabs Tech</strong> specializes in practical,
-              dependable IT solutions — from secure network architecture to
-              ongoing technical support.
-            </p>
-            <p className="text-gray-700 text-lg leading-relaxed">
-              Our mission is simple: deliver results that keep your operations
-              running smoothly, securely, and confidently.
-            </p>
-          </div>
-
-          {/* Glass card */}
-          <div className="relative bg-white rounded-2xl shadow-xl p-10 border border-blue-100">
-            <h3 className="text-2xl font-bold text-blue-900 mb-4">
-              Our Mission
-            </h3>
-            <p className="text-gray-700 leading-relaxed mb-4">
-              To empower businesses with reliable technology and network systems
-              that reduce downtime, strengthen security, and support growth.
-            </p>
-            <p className="text-gray-600 italic">
-              Technology should be an asset — not a burden.
-            </p>
-          </div>
-        </div>
-      </motion.section>
-
-      {/* WHAT SETS US APART */}
-      <motion.section
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
-        variants={fadeUp}
-        className="py-24 px-6 md:px-12 bg-white"
-      >
-        <div className="max-w-6xl mx-auto text-center mb-16">
-          <h2 className="text-4xl font-extrabold text-blue-900 mb-4">
-            What Sets Us Apart
-          </h2>
-          <p className="text-gray-700 text-lg max-w-3xl mx-auto">
-            We combine local expertise with enterprise-level IT standards.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 max-w-6xl mx-auto">
-          {[
-            {
-              title: "Personalized Service",
-              text: "Every project is tailored to your business goals and needs.",
-            },
-            {
-              title: "Transparent Communication",
-              text: "No jargon — just clear, honest advice you can trust.",
-            },
-            {
-              title: "Local Expertise",
-              text: "Based in Bowden, Alberta — we understand local businesses.",
-            },
-            {
-              title: "Comprehensive Support",
-              text: "From networks to cybersecurity and managed IT.",
-            },
-          ].map((item, index) => (
-            <div
-              key={index}
-              className="bg-gray-50 rounded-xl p-8 border border-blue-100 hover:shadow-xl transition-all duration-300"
-            >
-              <h3 className="text-xl font-bold text-blue-900 mb-3">
-                {item.title}
-              </h3>
-              <p className="text-gray-600">{item.text}</p>
+          <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-blue-900 mb-6">
+                Our Story
+              </h2>
+              <p className="text-gray-700 text-lg leading-relaxed mb-5">
+                Dorlabs Tech was founded with a clear purpose — to help Alberta
+                businesses navigate technology with confidence. Many organizations
+                struggle with unreliable networks, security risks, and IT systems
+                that slow them down. We set out to change that.
+              </p>
+              <p className="text-gray-700 text-lg leading-relaxed">
+                With hands-on experience in business networking, IT support, and
+                infrastructure management, we deliver practical solutions that
+                improve performance, security, and long-term reliability.
+              </p>
             </div>
-          ))}
-        </div>
-      </motion.section>
 
-      {/* VALUES */}
-      <motion.section
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
-        variants={fadeUp}
-        className="py-24 px-6 md:px-12 bg-blue-900 text-white"
-      >
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-4xl font-extrabold mb-10">
-            Our Core Values
-          </h2>
+            <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10 border border-blue-100">
+              <h3 className="text-2xl font-bold text-blue-900 mb-4">
+                Our Mission
+              </h3>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                Our mission is to deliver reliable IT services and business
+                networking solutions that reduce downtime, improve security,
+                and simplify technology for our clients.
+              </p>
+              <p className="text-gray-600 italic">
+                Technology should work for your business — not against it.
+              </p>
+            </div>
+          </div>
+        </motion.section>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* WHAT WE DO */}
+        <motion.section
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          variants={fadeUp}
+          className="py-24 px-6 md:px-12 bg-white"
+        >
+          <div className="max-w-6xl mx-auto text-center mb-14">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-blue-900 mb-4">
+              What We Do
+            </h2>
+            <p className="text-gray-700 text-lg max-w-3xl mx-auto">
+              We specialize in delivering complete IT and networking services for
+              businesses across Alberta. Every solution is designed to support
+              your current needs and future growth.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
-              { title: "Integrity", text: "Honest recommendations and ethical service." },
-              { title: "Responsiveness", text: "Fast, reliable support when you need it most." },
-              { title: "Expertise", text: "Skilled technicians who stay ahead of tech trends." },
-            ].map((value, index) => (
+              "Business network design and installation",
+              "Secure LAN, WAN, and wireless network solutions",
+              "Managed IT services with proactive monitoring",
+              "Cybersecurity and network protection",
+              "Cloud infrastructure, backup, and disaster recovery",
+              "Ongoing IT consulting and technology planning",
+            ].map((item, index) => (
               <div
                 key={index}
-                className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-8"
+                className="bg-gray-50 rounded-xl p-6 border border-blue-100 hover:shadow-lg transition"
               >
-                <h3 className="text-2xl font-bold text-blue-200 mb-3">
-                  {value.title}
-                </h3>
-                <p className="text-blue-100">{value.text}</p>
+                <p className="text-gray-700 text-lg">{item}</p>
               </div>
             ))}
           </div>
-        </div>
-      </motion.section>
+        </motion.section>
 
-      {/* OUR APPROACH */}
-      <motion.section
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true }}
-        variants={fadeUp}
-        className="py-24 px-6 md:px-12 bg-gray-50"
-      >
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
-          <div>
-            <h2 className="text-4xl font-extrabold text-blue-900 mb-6">
+        {/* WHAT SETS US APART */}
+        <motion.section
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          variants={fadeUp}
+          className="py-24 px-6 md:px-12 bg-gray-50"
+        >
+          <div className="max-w-6xl mx-auto text-center mb-14">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-blue-900 mb-4">
+              Why Choose Dorlabs Tech
+            </h2>
+            <p className="text-gray-700 text-lg max-w-3xl mx-auto">
+              We combine local Alberta expertise with enterprise-level IT
+              standards to deliver dependable, long-term solutions.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            {[
+              { title: "Local Expertise", text: "Alberta-based IT professionals who understand local businesses." },
+              { title: "Reliable Support", text: "Fast response times and dependable technical support." },
+              { title: "Customized Solutions", text: "IT and networking solutions tailored to your business." },
+              { title: "Transparent Pricing", text: "Honest advice with no hidden costs." },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-xl p-6 border border-blue-100 shadow-sm"
+              >
+                <h3 className="text-xl font-bold text-blue-900 mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600">{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </motion.section>
+
+        {/* OUR APPROACH */}
+        <motion.section
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
+          variants={fadeUp}
+          className="py-24 px-6 md:px-12 bg-blue-900 text-white"
+        >
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-8">
               Our Approach
             </h2>
-            <p className="text-lg text-gray-700 mb-6">
-              At Dorlabs Tech, we don’t just fix problems — we prevent them.
-            </p>
-            <ul className="space-y-4 text-gray-700 text-lg">
-              <li>✔ Planning network infrastructures for growth</li>
-              <li>✔ Securing systems before threats arise</li>
-              <li>✔ Providing ongoing support so you never feel stuck</li>
+            <ul className="space-y-4 text-lg text-blue-100">
+              <li>✔ Understand your business goals and challenges</li>
+              <li>✔ Design secure and scalable IT and networking systems</li>
+              <li>✔ Implement best-practice technology solutions</li>
+              <li>✔ Provide ongoing monitoring and responsive support</li>
             </ul>
           </div>
+        </motion.section>
+      </main>
 
-          <div className="bg-white rounded-2xl shadow-xl p-10 border border-blue-100">
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Whether you’re a small office needing a reliable network setup or
-              a growing business looking for managed IT support, we are here
-              to help — every step of the way.
-            </p>
-          </div>
-        </div>
-      </motion.section>
-    </main>
+      {/* TESTIMONIALS */}
+      <Testimonials />
+    </>
   );
 }

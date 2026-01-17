@@ -1,25 +1,35 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
 function AffordableServices() {
   return (
     <section className="bg-black py-16 text-white">
-      <div className="container mx-auto px-4 text-center">
-        <h2 className="text-3xl font-bold mb-6">Affordable IT Services</h2>
+      <div className="container mx-auto px-6 text-center">
+
+        <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          Professional IT & Networking Services in Alberta
+        </h2>
+
         <p className="text-lg max-w-3xl mx-auto mb-10 text-gray-300">
-          Welcome to Dorlabs Tech, your one-stop-shop for affordable and reliable IT services. We 
-          specialize in network setup, cybersecurity, cloud computing, and much more.
+          Dorlabs Tech provides reliable IT and networking services designed to
+          support small and medium-sized businesses in Alberta. From secure
+          network setup and managed IT support to cybersecurity and cloud
+          solutions, we help your business stay connected and protected.
         </p>
+
         <div className="flex justify-center">
-          <a 
-            href="https://www.dorlabtech.ca/services" 
-            className="bg-blue-900 text-white uppercase font-medium px-8 py-3 hover:bg-blue-800 transition-colors"
+          <Link
+            to="/services"
+            aria-label="Explore IT and networking services offered by Dorlabs Tech"
+            className="bg-blue-900 text-white uppercase font-semibold px-10 py-4 rounded-xl hover:bg-blue-800 transition-colors"
           >
-            FIND OUT MORE
-          </a>
+            View Our Services
+          </Link>
         </div>
+
       </div>
     </section>
-  )
+  );
 }
 
-export default AffordableServices
+export default AffordableServices;

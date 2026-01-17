@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { NavLink, Link } from 'react-router-dom';
 import logo from '../../assets/logo.webp';
-import { NavLink } from 'react-router-dom';
 
 const navItems = [
   { name: 'Home', to: '/' },
-  { name: 'Services', to: '/services' },
   { name: 'About', to: '/about' },
+  { name: 'Services', to: '/services' },
+  { name: 'Testimonials', to: '/testimonials' },
   { name: 'Contact', to: '/contact' },
 ];
 
@@ -16,11 +17,12 @@ function Navbar() {
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
+
         {/* Logo */}
-        <div className="flex items-center gap-3">
+        <Link to="/" className="flex items-center gap-3">
           <motion.img
             src={logo}
-            alt="DorLabs Logo"
+            alt="DorLabs Tech Logo"
             className="w-12 h-12 md:w-14 md:h-14"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -29,17 +31,19 @@ function Navbar() {
           <h1 className="text-blue-900 text-xl md:text-2xl font-bold tracking-widest">
             DORLABS TECH
           </h1>
-        </div>
+        </Link>
 
-        {/* Desktop Nav */}
+        {/* Desktop Menu */}
         <div className="hidden md:flex gap-8 items-center">
           {navItems.map((item) => (
             <NavLink
               key={item.to}
               to={item.to}
               className={({ isActive }) =>
-                `relative font-medium text-blue-900 transition duration-300 ${
-                  isActive ? 'text-blue-700' : 'hover:text-blue-600'
+                `relative font-medium transition duration-300 ${
+                  isActive
+                    ? 'text-blue-700'
+                    : 'text-blue-900 hover:text-blue-600'
                 }`
               }
             >
@@ -58,7 +62,7 @@ function Navbar() {
           ))}
         </div>
 
-        {/* Hamburger Icon */}
+        {/* Mobile Menu Button */}
         <button
           className="md:hidden focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
@@ -71,12 +75,12 @@ function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Nav */}
+      {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
             initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
+            animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
             className="md:hidden bg-white px-4 pt-2 pb-4"
@@ -86,8 +90,10 @@ function Navbar() {
                 key={item.to}
                 to={item.to}
                 className={({ isActive }) =>
-                  `block py-2 font-medium text-blue-900 transition ${
-                    isActive ? 'text-blue-700' : 'hover:text-blue-600'
+                  `block py-2 font-medium ${
+                    isActive
+                      ? 'text-blue-700'
+                      : 'text-blue-900 hover:text-blue-600'
                   }`
                 }
                 onClick={() => setIsOpen(false)}
