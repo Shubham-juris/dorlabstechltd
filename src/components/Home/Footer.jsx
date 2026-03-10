@@ -126,7 +126,7 @@ export default function Footer() {
             {/* Social Icons */}
             <div className="flex space-x-6 mt-6 justify-start sm:justify-start">
               <a
-                href="https://www.facebook.com/profile.php?id=100094213581942"
+                href="https://www.facebook.com/dorlabstech/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
@@ -143,7 +143,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="https://instagram.com/dorlabstech"
+                href="https://www.instagram.com/dorlabstech21/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -158,6 +158,22 @@ export default function Footer() {
                   <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zm8.75 2a1 1 0 110 2 1 1 0 010-2zm-4.25 1.25a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7z" />
                 </svg>
               </a>
+              <a
+              href="https://x.com/dorlabs74103"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="X"
+              className="hover:text-gray-300 transition-colors"
+            >
+            <svg
+              className="w-6 h-6"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path d="M18.244 2H21l-6.56 7.5L22 22h-6.828l-5.34-6.985L3.9 22H1l7.02-8.02L2 2h6.828l4.83 6.322L18.244 2zm-2.396 18h1.884L8.114 4H6.1l9.748 16z" />
+            </svg>
+            </a>
             </div>
           </div>
         </div>
